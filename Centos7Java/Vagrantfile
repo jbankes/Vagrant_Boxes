@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# This is a vagrantfile that will automatically download and run a vagrant box
+# that contains Centos 7 and OpenJDK 1.8 Developer. 
+#
+# This Vagrantfile is designed to be very minimal with the most common features
+# for beginners left in but commented out. 
+#
+# For more information on Vagrantfiles go to:
+#   https://www.vagrantup.com/docs/vagrantfile/
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "justin_liatrio/centos7java"
+
+  # Port Forwarding
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Synced folders
+  # config.vm.synced_folder "../data", "/vagrant_data"
+end
